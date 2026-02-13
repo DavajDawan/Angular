@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,input, computed } from '@angular/core';
 //import { DUMMY_USERS } from '../dummy-users';
 
 //to add dynamic users I use Random choice
@@ -14,18 +14,28 @@ import { Component,Input } from '@angular/core';
 export class UserComponent {
 
    //Zone.js
-  @Input({required:true})avatar!: string;
+ /*  @Input({required:true})avatar!: string;
   @Input({required:true})name!: string;
+  @Input({required:true})id!: string;
   
 
   get imagePath() {
     return 'assets/users/'+ this.avatar
-  }
+  } */
   
-  /*  imagePath = computed(() => ' assets/users/' + this.selectedUser().avatar); */
+  
+  //signal based
+
+  avatar = input.required<string>();
+  name = input.required<string>();
+  id = input.required<string>();
+
+  imagePath = computed(() => {
+    return ' assets/users/' + this.avatar();
+  });
   
   onSelectUser() {
 
-    console.log('New SelectorUser ' + this.name);
+    console.log('New SelectorUser ' + this.name(),this.id());
   }
 }
