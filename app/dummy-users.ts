@@ -17,7 +17,7 @@ export const DUMMY_USERS = [
     },
     {
         id: 'u4',
-        name: 'Saboori TS',
+        name: 'Erik TS',
         avatar:'user-4.jpg',
     },
     {
@@ -28,6 +28,11 @@ export const DUMMY_USERS = [
     {
         id: 'u6',
         name: 'Rasmus TS',
+        avatar:'user-6.jpg',
+    },
+    {
+        id: 'u7',
+        name: 'NewUser @for',
         avatar:'user-6.jpg',
     },
 
