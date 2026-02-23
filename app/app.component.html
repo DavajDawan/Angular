@@ -12,28 +12,13 @@
       <app-user [user]="user" (select)="onSelectUser($event)" />
     </li>
 
-    }
+    } @if(selectedUser){
     <app-tasks
       [name]="selectedUser ? selectedUser.name : ' '"
       [id]="selectedUser.id"
     />
+    } @else {
+    <p id="fallback">from 'ngelse' Select a user to see their tasks</p>
+    }
   </ul>
-  <!-- 
-    <li>
-      <app-user [user]="users[1]" (select)="onSelectUser($event)" />
-    </li>
-    <li>
-      <app-user [user]="users[2]" (select)="onSelectUser($event)" />
-    </li>
-    <li>
-      <app-user [user]="users[3]" (select)="onSelectUser($event)" />
-    </li>
-    <li>
-      <app-user [user]="users[4]" (select)="onSelectUser($event)" />
-    </li>
-    <li>
-      <app-user [user]="users[5]" (select)="onSelectUser($event)" />
-    </li>
- 
-   -->
 </main>
