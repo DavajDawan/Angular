@@ -1,0 +1,8 @@
+
+export interface Task{
+        id: string,
+        userId: string,
+        title: string,
+        summry: string,
+        dueDate: string
+}

@@ -1,15 +1,18 @@
-import { Component,input,output, computed } from '@angular/core';
+import { Component, input, output, computed } from '@angular/core';
+
+import { type User } from './user.module';
 //import { DUMMY_USERS } from '../dummy-users';
 
 //to add dynamic users I use Random choice
 //const randomIndex= Math.floor(Math.random()*DUMMY_USERS.length)
 // Init user object
-interface User{
+
+/* interface User{
   id:string,
   avatar: string,
   name: string
   
-}
+} */
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -31,8 +34,8 @@ export class UserComponent {
   
   
   //signal based
-  user= input.required<User>();
-  
+  user = input.required<User>();
+  selected = input.required<boolean>();
   select = output<string>();
 
   imagePath = computed(() => {
