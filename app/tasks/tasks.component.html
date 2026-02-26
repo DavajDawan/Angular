@@ -1,6 +1,6 @@
 <!-- <h2>{{ id }} {{ name }}</h2> -->
 @if (isAddingTask){
-<app-new-task (cansel)="onCancelAddTask()" />
+<app-new-task (cansel)="onCancelAddTask()" (add)="onAddTask($event)" />
 }
 <section id="tasks">
   <header>
